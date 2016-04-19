@@ -1,0 +1,187 @@
+@baseColor:#f2496c;
+@transTime: 430ms;
+
+*,*:before,*:after{box-sizing: border-box;}
+*{
+	-webkit-tap-highlight-color:transparent;
+	user-select:none;
+}
+html{
+	width:100%;height:100%; 
+}
+body{
+	font-size:30px;width:100%;height:100%; position:relative; background:@baseColor; 
+	font-family:"Helvetica Neue", Helvetica, Microsoft Yahei, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;
+}
+section{
+	width:100%;min-height:100%;background:#fff;position:relative;padding-top:78px;display:none;overflow:hidden;
+	transition: transform @transTime; transform: translate(0,0);
+	&:before{
+		width:100%;height:180px;top:-100px;content:""; position:absolute;left:0; background-color:@baseColor;
+	}
+}
+
+header{
+	height:80px; width:100%;position:fixed;top:0;left:0;z-index:9;background-color:@baseColor;display:none;
+	text-align:center; color:#fff;
+	font-size:1.2em; line-height:80px;
+	transition: transform @transTime;
+}
+.left-icon,.right-icon{
+	width:50px;height:50px;margin:15px;background:url('../images/icons.png') no-repeat; cursor:pointer;
+	
+} 
+.left-icon{
+	float:left;
+}
+.right-icon{
+	float:right;
+}
+.add-icon{
+	background-position:0 0;
+}
+.code-icon{
+	background-position:-52px 0;
+} 
+.share-icon{
+	background-position:-103px 0;
+}
+.back-icon{
+	background-position:-157px 0;
+}
+.empty-icon{
+	background-image:none;
+}
+
+.child-box{
+	width:226px;height:226px; border-radius:50%;border:10px solid #fff;
+	background:url('../images/child.jpg') center center; 
+	display:inline-block; 
+}
+.child-name{
+	font-size:1.2em;line-height:2;
+}
+
+
+
+.main-top{
+	height:470px; background:url('../images/home_head_background.jpg') center center; 
+}
+.main-child{
+	height:140px;position:relative;padding-top:1px;text-align:center;
+	.child-box{
+		margin-top:-140px;
+		
+	}
+	.battery{
+		display:inline-block;width:68px;height:38px;background:url('../images/icons.png') 0 -293px;
+	}
+} 
+.main-btns{
+	padding-top:38px;text-align:center;
+}
+.main-btn{
+	display:inline-block;margin:24px 48px; 
+	>div{
+		width:120px;height:120px;border-radius:50%; background-image:url('../images/icons.png');margin-bottom:15px;overflow:hidden;
+		cursor:pointer;
+		&:after{
+			content:""; width:100%;height:100%;display:block;
+		}
+		&:active:after{
+			background: #81d0e5; opacity:.4;
+		}
+
+	}
+	
+}
+.main-btn-1{background-color:#57d2e8;background-position:0 -53px;}
+.main-btn-2{background-color:#ffbb18;background-position:-120px -53px;}
+.main-btn-3{background-color:#f96a3e;background-position:-240px -53px;}
+.main-btn-4{background-color:#f55f7e;background-position:0 -173px;}
+.main-btn-5{background-color:#9fda2e;background-position:-120px -173px;}
+.main-btn-6{background-color:#b97de8;background-position:-240px -173px;}
+
+
+.sport-top{
+	text-align:center; background:@baseColor;padding:40px 0;
+	.child-name{color:#fff;}
+}
+.sport-circle{
+	padding:52px 0;
+}
+
+
+.sport-share-top{
+	padding:50px 0 195px;
+	background:@baseColor;
+	
+	.circle-box{
+		.circle-info{
+			background:@baseColor;
+			color:#fff;
+		}
+		
+	}
+	.circle-bg-l,.circle-bg-r{
+		background:#cf435d;
+	}
+	
+}
+.sport-share-title{
+	color:#fff;text-align:center;
+	margin-bottom:50px;
+}
+.sport-share-child{
+	height:160px;text-align:center;
+	.child-box{
+		margin-top:-140px;
+	}
+}
+
+@circleBgColor:#92cd12;
+@circleWIdth: 600px;
+.circle-box{
+	width:@circleWIdth; height:@circleWIdth; border-radius:50%; overflow:hidden;
+	position:relative;margin:0 auto;
+	>div{
+		position:absolute; width:50%;height:100%;top:0;
+	}
+	.circle-info{
+		width:@circleWIdth - 108; height:@circleWIdth - 108; border-radius:50%;background:#fff; top:54px; left:54px; z-index:6;
+		padding-top: 134px; text-align:center;
+		div{font-size:3.67em;}
+	}
+	
+	&.current{
+		.circle-bg-l{
+			z-index:1; 
+		}
+		.circle-bg-r{
+			background:@circleBgColor;
+		}
+	}
+}
+
+.circle-bg-l{
+	background: #e5e5e5;z-index:3;
+	border-radius: @circleWIdth/2 0 0 @circleWIdth/2;left:0;
+}
+.circle-bg-r{
+	background: #e5e5e5; 
+	border-radius: 0 @circleWIdth/2 @circleWIdth/2 0; right:0;
+}
+.circle-item{
+	background:@circleBgColor;z-index:2;
+	border-radius: @circleWIdth/2 0 0 @circleWIdth/2; left:0;
+	transform-origin: 100% 50%;
+	
+	transform:rotate(0);
+}
+.circle-dot{
+	width:54px; height:54px; background:@circleBgColor;border-radius:50%;
+	position:absolute;top:0;right:-27px; 
+}
+
+
+

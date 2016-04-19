@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>teemoApp</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=750,user-scalable=no">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<link type="text/css" rel="stylesheet" href="./stylesheets/reset.css"></link>
+		<link rel="stylesheet" href="./stylesheets/myStyle.css"></link>
+	</head>
+	<body >
+		<header class="main-head" id="main-head"><div class="left-icon add-icon"></div>糖猫<div class="right-icon code-icon"></div></header>
+		<section class="main-area" id="main-area">
+			<div class="container">
+					<div class="main-top"></div>
+					<div class="main-child">
+						<div class="child-box"></div>
+						<div>
+							<div class="battery"></div>
+						</div>
+					</div>
+					<div class="main-btns">
+						<div class="main-btn"><div class="main-btn-1"></div>定位</div>
+						<div class="main-btn"><div class="main-btn-2"></div>聊天</div>
+						<div class="main-btn"><div class="main-btn-3"></div>游戏</div>
+						<div class="main-btn"><div class="main-btn-4" data-toggle="next" data-target="sport"></div>运动</div>
+						<div class="main-btn"><div class="main-btn-5"></div>电话</div>
+						<div class="main-btn"><div class="main-btn-6"></div>故事</div>
+					</div>
+			</div>
+		</section>
+		
+		<header class="sport-head" id="sport-head"><div class="left-icon back-icon" data-toggle="prev" data-target="main" ></div>糖猫运动<div class="right-icon share-icon" data-toggle="next" data-target="sportShare"></div></header>
+		<section class="sport-area" id="sport-area">
+			<div class="container">
+				<div class="sport-top">
+					<div class="child-box"></div>
+					<div class="child-name">乐乐</div>
+				</div>
+				<div class="sport-circle">
+					<div class="circle-box" id="circle-box">
+						<div class="circle-bg-l">
+							<div class="circle-dot"></div>
+						</div>
+						<div class="circle-bg-r"></div>
+						<div class="circle-item">
+							<div class="circle-dot"></div>
+						</div>
+						
+						<div class="circle-info"></div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<header class="sport-share-head" id="sportShare-head"><div class="left-icon back-icon" data-toggle="prev" data-target="sport" ></div>糖猫运动分享<div class="right-icon empty-icon"></div></header>
+		<section class="sport-share-area" id="sportShare-area">
+			<div class="container">
+				<div class="sport-share-top">
+					<div class="sport-share-title">乐乐今日的运动情况</div>
+					<div class="circle-box" id="circle-box">
+						<div class="circle-bg-l">
+							<div class="circle-dot"></div>
+						</div>
+						<div class="circle-bg-r"></div>
+						<div class="circle-item">
+							<div class="circle-dot"></div>
+						</div>
+						<div class="circle-info"></div>
+					</div>
+				</div>
+				<div class="sport-share-child">
+					<div class="child-box"></div>
+					<div class="child-name">乐乐</div>
+				</div>
+			</div>
+		</section>
+		
+	</body>
+	<script src="./lib/myJquery.debug.js"></script>	
+</html>

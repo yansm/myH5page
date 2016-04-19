@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title>最好的成长是陪伴</title>
+		<meta name="Description" content="孩子的成长不容错过，看看你2015年用心陪孩子了吗？">
+		<meta charset="utf-8">
+		<meta id="Viewport" name="viewport" content="width=device-width">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv="Cache-Control" content="max-age=7200" />
+		<script>
+			var ww, ww2; //get proper width
+			if (window.innerWidth)
+				ww = window.innerWidth;
+			else if ((document.body) && (document.body.clientWidth))
+				ww = document.body.clientWidth;
+			if (document.documentElement && document.documentElement.clientHeight && document.documentElement.clientWidth)
+			{
+				ww2 = document.documentElement.clientWidth;
+			} 
+			ww = ww2||ww;
+			ww = ww || window.screen.width;
+			var mw = 750; // min width of site 
+			var ratio =  ww / mw; //calculate ratio
+				document.getElementById('Viewport').setAttribute('content', 'initial-scale=' + ratio + ', maximum-scale=' + ratio + ', minimum-scale=' + ratio + ', user-scalable=yes, width=' + mw);
+		</script>
+		<link rel="stylesheet" href="./styles/app.min.css"></link>
+	</head>
+	<body class="disImg">	
+
+		<div class="swiper-container teemo-swiper">
+		    <div class="swiper-wrapper">
+		        <div class="swiper-slide teemo-start">
+		        	<div class="teemo-start-logo"></div>
+		        	<div class="teemo-start-btn" data-target="next"></div>
+		        </div>
+		        <div class="swiper-slide teemo-end disImg">
+		        	<div class="teemo-end-logo"></div>
+		        </div>
+		    </div>
+		    <div class="swiper-pagination"></div>
+		</div>
+		<div class="teemo-letter"></div>
+		<div class="teemo-arrow"  data-target="next"></div>
+		<div class="teemo-orient">
+			<div><span></span>竖屏体验效果更好哦~</div>
+		</div>
+		<div class="teemo-loading" id="teemoLoading">
+			<div class="loading-title">
+		    	<div class="loading-circle"></div>
+		      	<span>loading...</span>
+		    </div>
+		</div>
+		<div class="teemo-pc">
+			<div class="teemo-code" id="teemoCode"></div>
+		</div>
+		<img src="./images/logo.jpg" style="opacity:0; width:0; height:0;display: block;"/>
+	</body>
+	<script src="./lib/bundle.min.js"></script>	
+</html>
